@@ -9,11 +9,11 @@ import Techstack from './components/techstack';
 function App() {
   return (
     <div className='contain'>
-      <div className='scroll-snap-child'><Hero className='child' /></div>
-      <div className='scroll-snap-child'><Intro className='child' /></div>
-      <div className='scroll-snap-child'><Techstack className='child' /></div>
-      <div className='scroll-snap-child'><Projects className='child' /></div>
-      <div className='scroll-snap-child'><Footer className='child' /></div>
+      <div className='scroll-snap-child'><Hero/></div>
+      <div className='scroll-snap-child'><Intro/></div>
+      <div className='scroll-snap-child'><Techstack/></div>
+      <div className='scroll-snap-child'><Projects/></div>
+      <div className='scroll-snap-child'><Footer/></div>
     </div>
   );
 }

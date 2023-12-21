@@ -14,7 +14,7 @@ function ProjectStack({ project }) {
     return (
         <ul className="flex">
             {project.techstack.map((tech, index) => (
-                <li key={tech.name} className={`mr-2 p-2 rounded-lg bg-${colors[index % colors.length]} `}>
+                <li key={tech.name} className={`mr-2 p-2 rounded-lg bg-${colors[index % colors.length]}`}>
                     <img src={tech.icon} alt={tech.name} className="w-8 h-8 object-contain"/>
                 </li>
             ))}
@@ -25,7 +25,6 @@ function ProjectStack({ project }) {
 function ProjectCard(props) {
     return (
         <motion.div 
-            // className="md:hover:transform md:hover:rotate-3 "
             whileHover={{ rotate: 3 }}
         >
             <HorizontalRule />
@@ -57,20 +56,20 @@ function ProjectCard(props) {
 
 function ProjectsMap() {
     return (
-        <>
+        <div className="m-auto">
             {projects.map((project, index) => {
                 return (
                     <ProjectCard key={project.name} index={index} {...project} />
                 )
             })}
             <HorizontalRule />
-        </>
+        </div>
     )
 }
 
 export default function Projects() {
     return (
-        <div className="h-full bg-white p-8 md:p-[7rem] min-h-screen">
+        <div className=" bg-white p-8 md:p-[7rem] max-h-full min-h-screen flex flex-col">
             <ProjectsMap />
         </div>
     )

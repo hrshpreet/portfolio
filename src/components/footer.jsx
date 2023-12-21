@@ -11,9 +11,9 @@ export default function Footer() {
     };
 
     return (
-        <div className="h h-100% bg-black flex flex-col justify-between">
+        <div className="h h-100% bg-black block">
 
-        <div className="grid grid-cols-2 md:grid-cols-4 p-[1.5rem] ">
+        <div className="grid grid-cols-2 md:grid-cols-4 p-[1.5rem]">
             {/* Download Resume Circle */}
             {/* <a href=""> */}
             <motion.div 
@@ -22,7 +22,7 @@ export default function Footer() {
                 transition={{ duration: 0.9 }}
             >
                 <a href="" className="flex w-full h-full">
-                <div className="m-auto">Download Resume</div>
+                <div className="m-auto text-center">Download Resume</div>
                 </a>
             </motion.div>
             {/* </a> */}
