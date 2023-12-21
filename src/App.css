@@ -1,0 +1,13 @@
+.contain {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+  }
+  
+  .scroll-snap-child {
+    scroll-snap-align: center;
+    height: 100%; /* Assuming you want each section to take the full viewport height */
+  }
+  

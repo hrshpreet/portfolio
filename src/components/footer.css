@@ -1,0 +1,42 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(720deg);
+    }
+}
+.spin-hover {
+    animation: spin 10s forwards;
+}
+.spin-hover:hover {
+    animation: none;
+}
+
+
+@keyframes moveUpDown {
+    0%,
+    100% {
+        transform: translateY(0vh);
+    }
+
+    25% {
+        transform: translateY(5vh);
+    }
+
+    75% {
+        transform: translateY(-5vh);
+    }
+}
+.toggle-image{
+    animation: moveUpDown 3s forwards;
+
+}
+.toggle-image:hover {
+    animation: none;
+}
+
+.text-glow {
+    text-shadow: #F8E6CC 1px 0 20px;
+}
