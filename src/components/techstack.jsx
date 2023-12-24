@@ -1,11 +1,12 @@
 import {technologies} from "../constants";
-import React from "react";
+import React from "react"
+import Scroll from "./Scroll";
 
 
 
 function TechCard(props) {
     // Selecting border color for the card element from the colors array
-    let colors = ["aes-blue", "aes-res", "aes-green", "aes-orange", "aes-yellow"];
+    let colors = ["aes-blue-light", "aes-res-light", "aes-green-light", "aes-orange-light", "aes-yellow-light"];
     // let colors = ["#8DD1DC", "#F87373", "#6BC547", "#F8B34C", "#F8E6CC"];
     const colorIndex = props.index % colors.length;
     const borderColor = colors[colorIndex];
@@ -49,11 +50,12 @@ function TechCards() {
 
 export default function Techstack() {
     return (
-        <div className="h-screen bg-white flex flex-col justify-center items-center">
+        <div className="h-screen bg-white flex flex-col justify-center items-center relative" id="techstack">
             <div className="font-extrabold font-montserrat text-[2rem] text-center mb-10 text-black">
                 My Techstack
             </div>
             <TechCards />
+            <Scroll color="black" id="projects" />
         </div>
     )
 }

@@ -14,6 +14,11 @@ import casandra from "./casandra.jpg"
 import flutter from "./flutter.svg"
 import firebase from "./firebase.jpg"
 
+import expandarrows from "./expandarrows.png"
+import github from './github.png'
+import linkedin from './linkedin.png'
+import twitter from './twitter.png'
+
 import saarthi from "./saarthi.png"
 import vriddhi from "./vriddhi.png"
 
@@ -33,6 +38,11 @@ export {
     casandra,
     flutter,
     firebase,
+
+    expandarrows,
+    github,
+    linkedin,
+    twitter,
 
     saarthi,
     vriddhi

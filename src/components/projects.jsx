@@ -1,6 +1,8 @@
 import React from "react";
 import { projects } from "../constants";
 import { motion } from "framer-motion";
+import Scroll from "./Scroll";
+import { expandarrows } from "../assets";
 
 function HorizontalRule() {
     return (
@@ -9,12 +11,10 @@ function HorizontalRule() {
 }
 
 function ProjectStack({ project }) {
-    let colors = ["aes-blue", "aes-res", "aes-green", "aes-orange", "aes-yellow"];
-
     return (
         <ul className="flex">
             {project.techstack.map((tech, index) => (
-                <li key={tech.name} className={`mr-2 p-2 rounded-lg bg-${colors[index % colors.length]}`}>
+                <li key={tech.name} className={`mr-2 p-2 rounded-lg bg-aes-blue-50`}>
                     <img src={tech.icon} alt={tech.name} className="w-8 h-8 object-contain"/>
                 </li>
             ))}
@@ -22,16 +22,26 @@ function ProjectStack({ project }) {
     )
 }
 
+function ProjectLink({ project }) {
+    return(
+        <div className="p-2 bg-aes-yellow-50">
+            <a href={project.link} target="_blank">
+            <img src={expandarrows} alt="link to the project" className="w-8 h-8" />
+            </a>
+        </div>
+    )
+}
+
 function ProjectCard(props) {
     return (
         <motion.div 
-            whileHover={{ rotate: 3 }}
+            whileHover={{ rotate: 0.5 }}
         >
             <HorizontalRule />
             <div className="md:flex py-[1.5rem] font-montserrat">
 
                 {/* Project index */}
-                <div className="hidden md:block text-[1.5rem] m-auto">{props.index + 1}</div>
+                <div className="hidden md:block text-[1.5rem] my-auto">{props.index + 1}</div>
                 <div className="hidden md:block w-[1.5rem]"></div>
 
                 {/* Project Image */}
@@ -46,7 +56,10 @@ function ProjectCard(props) {
                 {/* Project Desc */}
                 <div>
                     <div className="text-[2rem] md:text-[3rem] font-extrabold">{props.name}</div>
-                    <ProjectStack project={props} />
+                    <div className="flex  justify-between">
+                        <ProjectStack project={props} />
+                        <ProjectLink project={props} />
+                    </div>
                     <div className="md:text-[1.5rem]">{props.description}</div>
                 </div>
             </div>
@@ -69,8 +82,9 @@ function ProjectsMap() {
 
 export default function Projects() {
     return (
-        <div className=" bg-white p-8 md:p-[7rem] max-h-full min-h-screen flex flex-col">
+        <div className=" bg-white p-8 md:p-[7rem] max-h-full min-h-screen flex flex-col relative" id="projects">
             <ProjectsMap />
+            <Scroll color="black" id="footer" />
         </div>
     )
 }

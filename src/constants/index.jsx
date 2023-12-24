@@ -63,6 +63,7 @@ const projects = [
         name: "Refugee Medicine Management",
         description: "Provides medical facilities in refugee camps using video calls with specialists(doctors) and fast data transfer using kafka",
         image: saarthi,
+        link: "https://github.com/hrshpreet/Saarthi-Camps",
         techstack: [
             {
                 name: "React JS",
@@ -90,6 +91,7 @@ const projects = [
         name: "Vriddhi: Kids' Development Navigator",
         description: "National Level Hackathon Winner. Vriddhi, an app to measure and promote children's overall development",
         image: vriddhi,
+        link: "https://youtu.be/JKMVmQKKfUg",
         techstack: [
             {
                 name: "Flutter",
@@ -100,12 +102,12 @@ const projects = [
                 icon: firebase,
             }, 
             {
-                name: "React JS",
-                icon: react,
-            },
-            {
                 name: "CSS",
                 icon: css,
+            },
+            {
+                name: "React JS",
+                icon: react,
             },
         ]
     }
