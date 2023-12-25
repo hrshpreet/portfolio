@@ -6,7 +6,7 @@ import Scroll from "./Scroll";
 
 export default function Intro() {
     return (
-        <div className="md:grid grid-cols-2 h-screen bg-black text-white z-10 relative" id="#">
+        <div className="md:grid grid-cols-2 h-screen bg-black text-white relative" id="#">
             <Avatar />
             <Introduction />
             <Scroll id="techstack" color="white" />
@@ -53,7 +53,7 @@ function GetInTouch() {
     return (
         <div className="font-semibold text-aes-orange hover:cursor-pointer w-fit mb-3" onClick={handleEmailClick}>
             Get in Touch
-            <img src={expandarrows} alt="Get in Touch ->" className="h-7 inline-block ml-3"/>
+            <img src={expandarrows} alt="Get in Touch ->" className="h-7 inline-block ml-3 hover:scale-125 transition duration-300"/>
         </div>
     )
 }

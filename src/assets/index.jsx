@@ -21,6 +21,8 @@ import twitter from './twitter.png'
 
 import saarthi from "./saarthi.png"
 import vriddhi from "./vriddhi.png"
+import saarthilogo from "./saarthi-logo.png"
+import vriddhilogo from "./vriddhi-logo.png"
 
 export {
     cpp,
@@ -45,5 +47,7 @@ export {
     twitter,
 
     saarthi,
-    vriddhi
+    vriddhi,
+    saarthilogo,
+    vriddhilogo,
 }

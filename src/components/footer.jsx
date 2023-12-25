@@ -62,7 +62,7 @@ export default function Footer() {
         <div className="font-montserrat pb-3 text-center text-aes-orange">
             Harshpreet Singh 2024
         </div>
-        <div className="m-auto flex justify-center pb-10">
+        <div className="m-auto flex justify-center pb-20">
             <SocialLinks/>
         </div>
         </div>

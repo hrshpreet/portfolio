@@ -17,44 +17,55 @@ import {
 
     saarthi,
     vriddhi,
+    vriddhilogo,
+    saarthilogo,
 } from "../assets/index.jsx"
 
 const technologies = [
     {
         name: "HTML 5",
         icon: html,
+        color: "aes-res",
     },
     {
         name: "CSS 3",
         icon: css,
+        color: "aes-green",
     },
     {
         name: "Java Script",
         icon: js,
+        color: "aes-blue",
     },
     {
         name: "React JS",
         icon: react ,
+        color: "aes-orange",
     },
     {
         name: "Tailwind CSS",
         icon: tailwind,
+        color: "aes-yellow",
     },
     {
         name: "C++",
         icon: cpp,
+        color: "aes-res",
     },
     {
         name: "Python",
         icon: python,
+        color: "aes-green",
     },
     {
         name: "R prog.",
         icon: r,
+        color: "aes-blue",
     },
     {
         name: "figma",
         icon: figma,
+        color: "aes-orange",
     }
 ]
 
@@ -63,6 +74,7 @@ const projects = [
         name: "Refugee Medicine Management",
         description: "Provides medical facilities in refugee camps using video calls with specialists(doctors) and fast data transfer using kafka",
         image: saarthi,
+        logo: saarthilogo,
         link: "https://github.com/hrshpreet/Saarthi-Camps",
         techstack: [
             {
@@ -91,6 +103,7 @@ const projects = [
         name: "Vriddhi: Kids' Development Navigator",
         description: "National Level Hackathon Winner. Vriddhi, an app to measure and promote children's overall development",
         image: vriddhi,
+        logo: vriddhilogo,
         link: "https://youtu.be/JKMVmQKKfUg",
         techstack: [
             {

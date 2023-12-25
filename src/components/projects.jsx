@@ -11,11 +11,12 @@ function HorizontalRule() {
 }
 
 function ProjectStack({ project }) {
+    let colors = ['bg-aes-green-50', 'bg-aes-blue-50', 'bg-aes-orange-50', 'bg-aes-yellow-50']
     return (
         <ul className="flex">
             {project.techstack.map((tech, index) => (
-                <li key={tech.name} className={`mr-2 p-2 rounded-lg bg-aes-blue-50`}>
-                    <img src={tech.icon} alt={tech.name} className="w-8 h-8 object-contain"/>
+                <li key={tech.name} className={`mr-2 p-2 rounded-lg ${colors[index % colors.length]}`}>
+                    <img src={tech.icon} alt={tech.name} className="w-8 h-8 object-contain" />
                 </li>
             ))}
         </ul>
@@ -23,18 +24,28 @@ function ProjectStack({ project }) {
 }
 
 function ProjectLink({ project }) {
-    return(
+    return (
         <div className="p-2 bg-aes-yellow-50">
             <a href={project.link} target="_blank">
-            <img src={expandarrows} alt="link to the project" className="w-8 h-8" />
+                <img src={expandarrows} alt="link to the project" className="w-8 h-8" />
             </a>
+        </div>
+    )
+}
+
+function ProjectImage(props) {
+    console.log(props.image)
+    return (
+        <div className="hidden md:block min-w-[18rem] min-h-[11rem] w-[100%] md:max-w-[18rem] max-h-[11rem] bg-white relative">
+            <img src={props.logo} alt={props.name} className="w-[100%] md:w-[18rem] h-[11rem] object-contain" />
+            <img src={props.image} alt={props.name} className="w-[100%] md:w-[18rem] h-[11rem] -z-10 hover:z-10 object-contain absolute top-0" /> 
         </div>
     )
 }
 
 function ProjectCard(props) {
     return (
-        <motion.div 
+        <motion.div
             whileHover={{ rotate: 0.5 }}
         >
             <HorizontalRule />
@@ -45,11 +56,7 @@ function ProjectCard(props) {
                 <div className="hidden md:block w-[1.5rem]"></div>
 
                 {/* Project Image */}
-                <div className="hidden md:block min-w-[18rem] min-h-[11rem] w-[100%] md:max-w-[18rem] max-h-[11rem]">
-                    <img src={props.image} alt={props.name} className="w-[100%] md:w-[18rem] h-[11rem] object-contain" />
-                </div>
-
-                
+                <ProjectImage {...props} />
 
                 <div className="w-[1.5rem]"></div>
 
@@ -60,7 +67,7 @@ function ProjectCard(props) {
                         <ProjectStack project={props} />
                         <ProjectLink project={props} />
                     </div>
-                    <div className="md:text-[1.5rem]">{props.description}</div>
+                    {/* <div className="block md:hidden md:text-[1.5rem]">{props.description}</div> */}
                 </div>
             </div>
         </motion.div>
@@ -82,7 +89,7 @@ function ProjectsMap() {
 
 export default function Projects() {
     return (
-        <div className=" bg-white p-8 md:p-[7rem] max-h-full min-h-screen flex flex-col relative" id="projects">
+        <div className=" bg-white p-8 md:p-[7rem] max-h-full min-h-screen flex flex-col relative z-10" id="projects">
             <ProjectsMap />
             <Scroll color="black" id="footer" />
         </div>
