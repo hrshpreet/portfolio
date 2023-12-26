@@ -38,7 +38,6 @@ function ProjectImage(props) {
     return (
         <div className="hidden md:block min-w-[18rem] min-h-[11rem] w-[100%] md:max-w-[18rem] max-h-[11rem] bg-white relative">
             <img src={props.image} alt={props.name} className="w-[100%] md:w-[18rem] h-[11rem] object-contain" />
-            {/* <img src={props.image} alt={props.name} className="w-[100%] md:w-[18rem] h-[11rem] -z-10 hover:z-10 object-contain absolute top-0" />  */}
         </div>
     )
 }
@@ -95,12 +94,12 @@ function ProjectCard(props) {
 
                 {/* Project Desc */}
                 <div className="w-full">
-                    <div className="text-[2rem] md:text-[3rem] font-extrabold">{props.name}</div>
-                    <div className="flex  justify-between">
+                    <div className="text-[2rem] md:text-[2.5rem] font-extrabold leading-tight">{props.name}</div>
+                    <div className=" md:text-[1rem]">{props.description}</div>
+                    <div className="flex  justify-between pt-5">
                         <ProjectStack project={props} />
                         <ProjectLink project={props} />
                     </div>
-                    {/* <div className="block md:hidden md:text-[1.5rem]">{props.description}</div> */}
                 </div>
             </div>
         </motion.div>
@@ -123,7 +122,7 @@ function ProjectsMap() {
 
 export default function Projects() {
     return (
-        <div className=" bg-white p-8 md:p-[7rem] max-h-full min-h-screen flex flex-col relative z-10" id="projects">
+        <div className=" bg-white p-8 md:p-[7rem] max-h-full min-h-screen flex flex-col relative" id="projects">
             <ProjectsMap />
             <Scroll color="black" id="footer" />
         </div>

@@ -72,7 +72,7 @@ const technologies = [
 const projects = [
     {
         name: "Refugee Medicine Management",
-        description: "Provides medical facilities in refugee camps using video calls with specialists(doctors) and fast data transfer using kafka",
+        description: "Medical facilities in refugee camps using video calls with specialists(doctors) and big data transfer using kafka",
         image: saarthi,
         logo: saarthilogo,
         link: "https://github.com/hrshpreet/Saarthi-Camps",
