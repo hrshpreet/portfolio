@@ -1,10 +1,10 @@
 import React from "react";
-import arrow from "../assets/arrow.png";
-import toggle from "../assets/toggle.png";
-import triangle from "../assets/triangle.png";
+import arrow from "../../assets/arrow.png";
+import toggle from "../../assets/toggle.png";
+import triangle from "../../assets/triangle.png";
 import "./footer.css";
 import { motion } from "framer-motion";
-import SocialLinks from "./Socials";
+import SocialLinks from "../Socials";
 
 export default function Footer() {
     const handleEmailClick = () => {

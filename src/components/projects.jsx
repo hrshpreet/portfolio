@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { projects } from "../constants";
 import { motion } from "framer-motion";
 import Scroll from "./Scroll";
@@ -37,16 +37,38 @@ function ProjectImage(props) {
     console.log(props.image)
     return (
         <div className="hidden md:block min-w-[18rem] min-h-[11rem] w-[100%] md:max-w-[18rem] max-h-[11rem] bg-white relative">
-            <img src={props.logo} alt={props.name} className="w-[100%] md:w-[18rem] h-[11rem] object-contain" />
-            <img src={props.image} alt={props.name} className="w-[100%] md:w-[18rem] h-[11rem] -z-10 hover:z-10 object-contain absolute top-0" /> 
+            <img src={props.image} alt={props.name} className="w-[100%] md:w-[18rem] h-[11rem] object-contain" />
+            {/* <img src={props.image} alt={props.name} className="w-[100%] md:w-[18rem] h-[11rem] -z-10 hover:z-10 object-contain absolute top-0" />  */}
         </div>
     )
 }
 
 function ProjectCard(props) {
+    const [isHovered, setIsHovered] = useState(false);
+
+    // If it is mobile screen, i want to show the project img rather than logo
+    // Hence isHovered is made true 
+    useEffect(() => {
+        const isMobileScreen = window.innerWidth < 768;
+    
+        if (isMobileScreen) {
+          setIsHovered(true);
+        }
+    }, []);
+    
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
+
     return (
         <motion.div
             whileHover={{ rotate: 0.5 }}
+            onHoverStart={handleMouseEnter}
+            onHoverEnd={handleMouseLeave}
         >
             <HorizontalRule />
             <div className="md:flex py-[1.5rem] font-montserrat">
@@ -56,12 +78,23 @@ function ProjectCard(props) {
                 <div className="hidden md:block w-[1.5rem]"></div>
 
                 {/* Project Image */}
-                <ProjectImage {...props} />
+                <div className="min-w-[18rem] min-h-[11rem] w-[100%] md:max-w-[18rem] max-h-[11rem] bg-white overflow-hidden relative">
+                    <img
+                        src={props.logo}
+                        alt={props.name}
+                        className={`w-[100%] md:w-[18rem] h-[11rem] object-contain transition-transform duration-300 ease-in-out transform ${isHovered ? '-translate-y-full' : 'translate-y-0'}`}
+                    />
+                    <img
+                        src={props.image}
+                        alt={props.name}
+                        className={`w-[100%] md:w-[18rem] h-[11rem] object-contain transition-transform duration-300 ease-in-out transform ${isHovered ? '-translate-y-full' : 'translate-y-0'}`}
+                    />
+                </div>
 
                 <div className="w-[1.5rem]"></div>
 
                 {/* Project Desc */}
-                <div>
+                <div className="w-full">
                     <div className="text-[2rem] md:text-[3rem] font-extrabold">{props.name}</div>
                     <div className="flex  justify-between">
                         <ProjectStack project={props} />
@@ -71,8 +104,9 @@ function ProjectCard(props) {
                 </div>
             </div>
         </motion.div>
-    )
+    );
 }
+
 
 function ProjectsMap() {
     return (

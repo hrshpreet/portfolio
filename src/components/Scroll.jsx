@@ -8,7 +8,7 @@ export default function Scroll(props) {
         }
     };
     return (
-        <div className="absolute left-1/2 bottom-8 transform -translate-x-1/2 hover:cursor-pointer" onClick={scrollToNextSection}>
+        <div className="absolute left-1/2 bottom-8 transform -translate-x-1/2 hover:cursor-pointer z-10" onClick={scrollToNextSection}>
             <div className={`animate-bounce text-${props.color} text-2xl opacity-80`}>
                 <span>╲╱</span>
             </div>

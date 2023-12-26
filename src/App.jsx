@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Footer from './components/footer';
+import Footer from './components/footer/footer';
 import Hero from './components/hero';
 import Intro from './components/intro';
 import Projects from './components/projects';
-import Techstack from './components/techstack';
+import Techstack from './components/techstack/techstack';
 import Cursor from './components/cursor';
 
 function App() {
