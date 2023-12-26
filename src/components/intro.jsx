@@ -39,7 +39,7 @@ function Introduction() {
 
 function Avatar() {
     return (
-        <div className="pt-0 md:pt-0 h-[45vh] md:h-full z-10">
+        <div className="p-2 h-[45vh] md:h-full z-10">
             <Spline scene="https://prod.spline.design/bbVF8NYtNYY6Fck4/scene.splinecode" />
         </div>
     );
