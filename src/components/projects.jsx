@@ -109,7 +109,7 @@ function ProjectCard(props) {
 
 function ProjectsMap() {
     return (
-        <div className="m-auto">
+        <div className="m-auto pb-16 md:pb-0">
             {projects.map((project, index) => {
                 return (
                     <ProjectCard key={project.name} index={index} {...project} />
@@ -122,7 +122,7 @@ function ProjectsMap() {
 
 export default function Projects() {
     return (
-        <div className=" bg-white p-8 md:p-[7rem] max-h-full min-h-screen flex flex-col relative" id="projects">
+        <div className=" bg-white p-8 md:p-[7rem] max-h-full min-h-[100svh] flex flex-col relative" id="projects">
             <ProjectsMap />
             <Scroll color="black" id="footer" />
         </div>

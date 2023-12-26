@@ -32,7 +32,7 @@ function ScrollDown() {
 
 export default function Hero() {
     return (
-        <div className="flex align-middle text-center justify-center h-screen w-full bg-black relative">
+        <div className="flex align-middle text-center justify-center h-[100svh] w-full bg-black relative">
             <div className=" relative font-sequel font-semibold w-min text-6xl md:text-[12.5rem] leading-[76%] m-auto text-white">
                 HARSH PREET
                 <Balls />

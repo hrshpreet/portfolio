@@ -6,7 +6,7 @@ import Scroll from "./Scroll";
 
 export default function Intro() {
     return (
-        <div className="md:grid grid-cols-2 min-h-screen bg-black text-white relative" id="#">
+        <div className="flex md:grid grid-cols-2 min-h-[100svh] bg-black text-white relative" id="#">
             <Avatar />
             <Introduction />
             <Scroll id="techstack" color="white" />
@@ -39,7 +39,7 @@ function Introduction() {
 
 function Avatar() {
     return (
-        <div className="p-2 h-[45vh] md:h-full z-10">
+        <div className="hidden md:block p-2 h-[45vh] md:h-full z-10">
             <Spline scene="https://prod.spline.design/bbVF8NYtNYY6Fck4/scene.splinecode" />
         </div>
     );

@@ -31,7 +31,7 @@ function TechCards() {
 
 export default function Techstack() {
     return (
-        <div className="h-screen bg-white flex flex-col justify-center items-center relative z-10" id="techstack">
+        <div className="h-[100svh] bg-white flex flex-col justify-center items-center relative z-10" id="techstack">
             <div className="font-extrabold font-montserrat text-[2rem] text-center mb-10 text-black">
                 My Techstack
             </div>
