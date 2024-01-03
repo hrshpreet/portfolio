@@ -1,1 +1,2 @@
-My portfolio website  Hosted: [here](harshpreet.netlify.app)
+My portfolio website  
+Hosted: [here](https://harshpreet.netlify.app/)
